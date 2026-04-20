@@ -1,0 +1,55 @@
+/*
+Theme Name: Felan Child - TradieHub
+Template: felan
+Version: 1.0.0
+Description: TradieHub custom child theme for Felan. Overrides typography, colors, and adds contractor-specific templates.
+Author: Liam
+*/
+
+/* ============================================================
+   TradieHub brand colors
+   Primary: #1a6b4a (green - trusted, trades)
+   Accent:  #f4a01b (amber - active, call-to-action)
+   ============================================================ */
+
+:root {
+    --th-primary: #1a6b4a;
+    --th-primary-dark: #145539;
+    --th-accent: #f4a01b;
+    --th-accent-dark: #d4890f;
+    --th-text: #1c1c1c;
+    --th-muted: #6b7280;
+    --th-bg-light: #f9fafb;
+    --th-border: #e5e7eb;
+    --th-radius: 8px;
+}
+
+/* Escrow status badges */
+.tradiehub-status-held     { color: #92400e; background: #fef3c7; padding: 2px 8px; border-radius: 4px; font-size: .875rem; }
+.tradiehub-status-released { color: #065f46; background: #d1fae5; padding: 2px 8px; border-radius: 4px; font-size: .875rem; }
+.tradiehub-status-disputed { color: #7f1d1d; background: #fee2e2; padding: 2px 8px; border-radius: 4px; font-size: .875rem; }
+
+/* Contractor profile badges */
+.tradiehub-contractor-profile .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: .8rem;
+    font-weight: 600;
+    margin-right: 4px;
+}
+.badge.verified      { background: #d1fae5; color: #065f46; }
+.badge.insurance     { background: #dbeafe; color: #1e40af; }
+.badge.workers-comp  { background: #ede9fe; color: #5b21b6; }
+
+/* SEO landing page */
+.tradiehub-seo-page .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+.tradiehub-seo-page h1         { font-size: 2rem; color: var(--th-primary); margin-bottom: 1rem; }
+.tradiehub-seo-page .intro     { font-size: 1.1rem; color: var(--th-muted); margin-bottom: 2rem; }
+.contractor-list               { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.contractor-card               { border: 1px solid var(--th-border); border-radius: var(--th-radius); padding: 1rem; background: #fff; }
+.faq-section                   { margin-top: 3rem; }
+.faq-section details           { border: 1px solid var(--th-border); border-radius: var(--th-radius); padding: 1rem; margin-bottom: .75rem; }
+.faq-section summary           { font-weight: 600; cursor: pointer; }
+.breadcrumb                    { margin-bottom: 1.5rem; color: var(--th-muted); font-size: .9rem; }
+.breadcrumb a                  { color: var(--th-primary); text-decoration: none; }
