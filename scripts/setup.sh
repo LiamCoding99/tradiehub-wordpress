@@ -40,12 +40,17 @@ wp plugin install woocommerce --activate
 wp plugin install elementor --activate
 wp plugin install woo-wallet --activate
 wp plugin install fluent-community --activate
+wp plugin install buddypress --activate
 wp plugin install query-monitor --activate
 
+echo "==> Installing and activating Astra theme..."
+wp theme install astra --activate
+
+echo "==> Activating TradieHub child theme..."
+wp theme activate tradiehub
+
 echo ""
-echo "==> Done! Manual steps remaining:"
-echo "    1. Install Felan parent theme from ThemeForest ZIP"
-echo "    2. Install B2BKing from CodeCanyon ZIP"
-echo "    3. Install FluentCommunity Pro ZIP"
-echo "    4. Visit wp-admin, accept Felan's TGMPA required plugin installs"
-echo "    5. Run: bash scripts/seed-demo-data.sh"
+echo "==> Done! Next steps:"
+echo "    1. Run: bash scripts/seed-demo-data.sh"
+echo "    2. Run: wp tradiehub generate-seo-pages"
+echo "    3. Visit wp-admin to configure FluentCommunity spaces and BuddyPress groups"

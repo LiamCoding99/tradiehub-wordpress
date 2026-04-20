@@ -21,8 +21,9 @@ wp-includes/
 # WordPress uploads
 wp-content/uploads/
 
-# Third-party themes (paid, not committed) - felan-child IS committed
-wp-content/themes/felan/
+# Third-party themes (free, installed via WP-CLI, not committed) - tradiehub IS committed
+wp-content/themes/astra/
+wp-content/themes/astra-addon/
 
 # Third-party plugins - tradiehub-core IS committed
 # Use /* instead of / so git can apply the negation for the subdirectory
@@ -49,3 +50,6 @@ db-exports/
 
 # Local resources (AI tooling, design docs - not for repo)
 local-resources/
+
+# Internal planning docs
+docs/superpowers/

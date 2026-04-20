@@ -1,8 +1,8 @@
 /*
-Theme Name: Felan Child - TradieHub
-Template: felan
+Theme Name: TradieHub
+Template: astra
 Version: 1.0.0
-Description: TradieHub custom child theme for Felan. Overrides typography, colors, and adds contractor-specific templates.
+Description: TradieHub child theme for Astra. Overrides typography, colors, and adds contractor-specific styles.
 Author: Liam
 */
 
@@ -42,6 +42,19 @@ Author: Liam
 .badge.insurance     { background: #dbeafe; color: #1e40af; }
 .badge.workers-comp  { background: #ede9fe; color: #5b21b6; }
 
+/* Contractor card grid */
+.tradiehub-contractor-profile .contractor-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.tradiehub-contractor-profile .contractor-header h1 {
+    font-size: 1.75rem;
+    color: var(--th-primary);
+    margin: 0;
+}
+
 /* SEO landing page */
 .tradiehub-seo-page .container { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
 .tradiehub-seo-page h1         { font-size: 2rem; color: var(--th-primary); margin-bottom: 1rem; }
@@ -53,3 +66,27 @@ Author: Liam
 .faq-section summary           { font-weight: 600; cursor: pointer; }
 .breadcrumb                    { margin-bottom: 1.5rem; color: var(--th-muted); font-size: .9rem; }
 .breadcrumb a                  { color: var(--th-primary); text-decoration: none; }
+
+/* Astra overrides - primary button color */
+.ast-button-wrap .ast-custom-button,
+.ast-button,
+a.button,
+button[type="submit"],
+input[type="submit"] {
+    background-color: var(--th-accent);
+    border-color: var(--th-accent);
+    color: #fff;
+}
+.ast-button-wrap .ast-custom-button:hover,
+a.button:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background-color: var(--th-accent-dark);
+    border-color: var(--th-accent-dark);
+}
+
+/* Astra header link color */
+.ast-header-break-point .ast-above-header-navigation .menu-item a,
+#masthead .main-header-bar a {
+    color: var(--th-primary);
+}

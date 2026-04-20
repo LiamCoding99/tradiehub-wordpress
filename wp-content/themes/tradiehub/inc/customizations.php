@@ -1,15 +1,6 @@
 <?php
 if (!defined('ABSPATH')) exit;
 
-/*
- * Placeholder for child-theme-specific hooks.
- * Contractor profile display, quote form tweaks, and Elementor widget overrides
- * go here once the tradiehub-core plugin is active and the Felan demo is imported.
- */
-
-// Disable Felan's built-in package listing if B2BKing handles quotes.
-// add_filter('felan_show_package_listing', '__return_false');
-
 // Add a "Licensed" badge to author archive titles for verified contractors.
 add_filter('the_title', function (string $title): string {
     if (!is_author()) return $title;
@@ -22,3 +13,9 @@ add_filter('the_title', function (string $title): string {
     }
     return $title;
 }, 20, 1);
+
+// Customizer: wire brand colors into Astra's color settings.
+add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
+    $wp_customize->get_setting('astra-color-global-color-1')->default = '#1a6b4a';
+    $wp_customize->get_setting('astra-color-global-color-2')->default = '#f4a01b';
+});

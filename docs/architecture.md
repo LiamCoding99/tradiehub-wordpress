@@ -7,15 +7,15 @@ TradieHub is a WordPress-based contractor directory and marketplace for Californ
 ```
 Browser
   |
-WordPress (Felan child theme + Elementor page builder)
+WordPress (Astra + TradieHub child theme + Elementor page builder)
   |
 tradiehub-core plugin (custom integration layer)
   |
 Plugin tier:
   - WooCommerce (order backbone)
   - TeraWallet (wallet and escrow primitives)
-  - B2BKing (quote workflow UI)
-  - FluentCommunity Pro (contractor community + messaging)
+  - FluentCommunity (contractor community + messaging)
+  - BuddyPress (member profiles and directory)
   - Rank Math SEO (schema, sitemap)
   |
 Database: MariaDB

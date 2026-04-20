@@ -29,15 +29,18 @@ TradieHub is a directory, marketplace, and community where:
 
 ## Stack
 
-| Component | Tool | Version | Why |
-|-----------|------|---------|-----|
-| CMS | WordPress | 6.7+ | Ecosystem, plugin availability |
-| Theme | Felan (child theme) | 1.1.7+ | Purpose-built for freelance/job-board marketplaces |
-| Quote workflow | B2BKing | 5.5.30+ | B2B quoting, customer groups (Homeowner vs Contractor) |
-| Wallet/Escrow | TeraWallet (woo-wallet) | latest | Free, WooCommerce-native, exposes credit/debit primitives |
-| Community | FluentCommunity Pro | 2.x | Real-time messaging + community spaces, replaces Better Messages Pro |
-| SEO | Rank Math SEO | latest | Local SEO, schema.org, sitemap |
-| Page builder | Elementor (free) | latest | Required by Felan for page templates |
+Everything here is free and open source.
+
+| Component | Tool | Cost | Why |
+|-----------|------|------|-----|
+| CMS | WordPress | free | Ecosystem, plugin availability |
+| Theme | Astra + TradieHub child theme | free | Lightweight, Elementor-compatible, fully customizable |
+| Quote workflow | tradiehub-core (custom) | free | Custom CPTs + REST API handle the full quote lifecycle - no paid plugin needed |
+| Wallet/Escrow | TeraWallet (woo-wallet) | free | WooCommerce-native, exposes credit/debit primitives |
+| Community | FluentCommunity | free | Spaces + basic messaging in the free tier |
+| Member profiles | BuddyPress | free | User profiles and member directory |
+| SEO | Rank Math SEO | free | Local SEO, schema.org, sitemap |
+| Page builder | Elementor | free | Page templates and layout |
 
 See [docs/decisions/](docs/decisions/) for detailed reasoning on each stack choice.
 
@@ -61,13 +64,14 @@ The custom `tradiehub-core` plugin is the integration layer:
 
 1. Clone this repo
 2. Set up a LocalWP site (PHP 8.3, nginx, MariaDB)
-3. Symlink (or copy) `wp-content/themes/felan-child/` and `wp-content/plugins/tradiehub-core/` into your LocalWP install's `wp-content/` directory
-4. Obtain paid plugins: Felan (ThemeForest ~$59), B2BKing (CodeCanyon ~$179/yr), FluentCommunity Pro (~$129/yr)
-5. Run from the LocalWP `app/public` directory: `bash /path/to/repo/scripts/setup.sh`
-6. Run: `bash /path/to/repo/scripts/seed-demo-data.sh`
-7. MANUAL: Visit wp-admin, accept Felan's TGMPA required plugin installs, import Felan demo content, configure B2BKing customer groups, create FluentCommunity spaces
-8. Run: `wp tradiehub generate-seo-pages`
-9. Visit `http://tradiehub.local`
+3. Symlink (or copy) `wp-content/themes/tradiehub/` and `wp-content/plugins/tradiehub-core/` into your LocalWP install's `wp-content/` directory
+4. Run from the LocalWP `app/public` directory: `bash /path/to/repo/scripts/setup.sh`
+5. Run: `bash /path/to/repo/scripts/seed-demo-data.sh`
+6. Run: `wp tradiehub generate-seo-pages`
+7. Visit wp-admin to create FluentCommunity spaces (Trades Talk, Tools and Equipment, Code and Compliance) and BuddyPress member groups
+8. Visit `http://tradiehub.local`
+
+No paid plugins required.
 
 ## What I Learned
 
