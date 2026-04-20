@@ -71,7 +71,13 @@ The custom `tradiehub-core` plugin is the integration layer:
 
 ## What I Learned
 
-*(Liam writes this section - voice-critical, personal reflection on what was hard, what worked, what would be done differently.)*
+The hardest part was the escrow state machine. I initially modelled it as a simple boolean (paid/released), then realised I needed a third state for disputes. The `wp_tradiehub_escrow` table ended up with `held`, `released`, and `disputed` states, and I had to add an explicit check for `status = 'held'` in the release function to prevent double-releases. Obvious in hindsight, not obvious at 1am.
+
+The `.gitignore` / negation problem cost me an hour. Git cannot negate a file inside an ignored directory - `wp-content/plugins/` blocks everything including my own plugin, and `!tradiehub-core` does nothing. The fix is `wp-content/plugins/*`, which ignores the contents but not the directory itself. Now I know.
+
+WordPress REST auth bit me too. My `rest_complete_job` endpoint initially let any logged-in user confirm completion. I had to look up the accepted quote, pull `contractor_id` from its meta, and return a 403 if the caller was neither the homeowner nor that contractor. The kind of thing you only catch when you think "what if I log in as someone else and hit this endpoint."
+
+If I were starting over I would sort the escrow model first and work outward. I built the quote workflow before the wallet and had to retrofit the escrow calls. The reverse order would have been cleaner.
 
 ## What Is Next
 
