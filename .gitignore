@@ -1,0 +1,47 @@
+# WordPress core root files (not committed)
+wp-config.php
+wp-config-sample.php
+wp-login.php
+wp-blog-header.php
+wp-comments-post.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+index.php
+
+# WordPress core directories (not committed)
+wp-admin/
+wp-includes/
+
+# WordPress uploads
+wp-content/uploads/
+
+# Third-party themes (paid, not committed) — felan-child IS committed
+wp-content/themes/felan/
+
+# Third-party plugins — tradiehub-core IS committed
+wp-content/plugins/
+!wp-content/plugins/tradiehub-core/
+
+# Environment and OS
+.env
+.DS_Store
+Thumbs.db
+*.log
+
+# Build artifacts
+node_modules/
+vendor/
+*.swp
+*.swo
+
+# Local WP config overrides
+wp-config-local.php
+
+# DB exports (generated locally, never committed)
+db-exports/

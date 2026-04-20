@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"C:/Users/thong/Documents/Thong users/Projects/TradieHub/.claude/agents\")",
+      "Bash(mkdir -p \"C:/Users/thong/Documents/Thong users/Projects/TradieHub/.claude/skills/wp-cli-patterns\")",
+      "Bash(mkdir -p \"C:/Users/thong/Documents/Thong users/Projects/TradieHub/.claude/skills/wordpress-php-conventions\")",
+      "Bash(php -l \"C:/Users/thong/Documents/Thong users/Projects/TradieHub/wp-content/themes/felan-child/functions.php\")",
+      "Bash(php -l \"C:/Users/thong/Documents/Thong users/Projects/TradieHub/wp-content/themes/felan-child/inc/customizations.php\")",
+      "Bash(where php *)",
+      "Read(//usr/**)",
+      "Read(//c/xampp/php/**)",
+      "Read(//c/wamp64/bin/**)",
+      "Bash(\"/c/xampp/php/php.exe\" -l \"C:/Users/thong/Documents/Thong users/Projects/TradieHub/wp-content/themes/felan-child/functions.php\")",
+      "Bash(\"/c/xampp/php/php.exe\" -l \"C:/Users/thong/Documents/Thong users/Projects/TradieHub/wp-content/themes/felan-child/inc/customizations.php\")",
+      "Bash(php -l \"C:\\\\Users\\\\thong\\\\Documents\\\\Thong users\\\\Projects\\\\TradieHub\\\\wp-content\\\\plugins\\\\tradiehub-core\\\\tradiehub-core.php\")",
+      "Bash(php -l \"C:\\\\Users\\\\thong\\\\Documents\\\\Thong users\\\\Projects\\\\TradieHub\\\\wp-content\\\\plugins\\\\tradiehub-core\\\\includes\\\\class-activator.php\")",
+      "PowerShell(php -l \"C:\\\\Users\\\\thong\\\\Documents\\\\Thong users\\\\Projects\\\\TradieHub\\\\wp-content\\\\plugins\\\\tradiehub-core\\\\tradiehub-core.php\"; php -l \"C:\\\\Users\\\\thong\\\\Documents\\\\Thong users\\\\Projects\\\\TradieHub\\\\wp-content\\\\plugins\\\\tradiehub-core\\\\includes\\\\class-activator.php\")",
+      "PowerShell(Get-Command *)",
+      "PowerShell(Test-Path *)",
+      "PowerShell(& \"C:\\\\xampp\\\\php\\\\php.exe\" -l \"C:\\\\Users\\\\thong\\\\Documents\\\\Thong users\\\\Projects\\\\TradieHub\\\\wp-content\\\\plugins\\\\tradiehub-core\\\\tradiehub-core.php\"; & \"C:\\\\xampp\\\\php\\\\php.exe\" -l \"C:\\\\Users\\\\thong\\\\Documents\\\\Thong users\\\\Projects\\\\TradieHub\\\\wp-content\\\\plugins\\\\tradiehub-core\\\\includes\\\\class-activator.php\")",
+      "Bash(php *)",
+      "Read(//c/php/**)",
+      "Read(//c/Program Files/PHP/**)",
+      "Read(//c/laragon/bin/**)",
+      "Bash(/c/xampp/php/php.exe *)",
+      "Bash(ls /c/wamp*/bin/php/*/php.exe)",
+      "Bash(powershell.exe -Command \"Get-Command php -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(php.exe -l \"C:/Users/thong/Documents/Thong users/Projects/TradieHub/wp-content/plugins/tradiehub-core/includes/class-quote-workflow.php\")",
+      "Bash(where.exe php *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
