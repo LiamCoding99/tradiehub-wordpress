@@ -21,12 +21,13 @@ wp-includes/
 # WordPress uploads
 wp-content/uploads/
 
-# Third-party themes (paid, not committed) — felan-child IS committed
+# Third-party themes (paid, not committed) - felan-child IS committed
 wp-content/themes/felan/
 
-# Third-party plugins — tradiehub-core IS committed
-wp-content/plugins/
-!wp-content/plugins/tradiehub-core/
+# Third-party plugins - tradiehub-core IS committed
+# Use /* instead of / so git can apply the negation for the subdirectory
+wp-content/plugins/*
+!wp-content/plugins/tradiehub-core
 
 # Environment and OS
 .env
